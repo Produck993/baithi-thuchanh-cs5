@@ -33,23 +33,22 @@ export default function Create() {
   })
 
 
-  const handleChange = (e) => {
-    setValue({
-      ...value,
-      [e.target.name]: e.target.value
-    })
-  }
+  // const handleChange = (e) => {
+  //   setValue({
+  //     ...value,
+  //     [e.target.name]: e.target.value
+  //   })
+  // }
   function handleSubmit( value ) {
     axios.post(`http://localhost:3001/products`, value)
       .then(res => {
-        console.log(res)
-        setProduct(res.data);
+        alert("Create successfully!!!",res);
         navigate('/')
       })
       .catch(err => {
         throw err;
       });
-    alert("Create successfully!!!");
+    // alert("Create successfully!!!");
   }
 
   return (

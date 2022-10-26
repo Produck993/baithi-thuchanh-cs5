@@ -32,9 +32,7 @@ export default function Update() {
       .put(`http://localhost:3001/products/${productID}`, product)
       .then(res => {
         alert(
-          `${isCreate ? "Create" : "Edit"} Product ${JSON.stringify(
-            res.data
-          )} successfully!!!`
+          `Update successfully!!!`
           
         ) ; navigate(`/`);
       })
